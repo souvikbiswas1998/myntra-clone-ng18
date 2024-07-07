@@ -3,7 +3,7 @@
 	"version": 1,
 	"newProjectRoot": "projects",
 	"projects": {
-		"host": {
+		"grocery": {
 			"projectType": "application",
 			"schematics": {
 				"@schematics/angular:component": {
@@ -19,10 +19,10 @@
 					"options": {},
 					"configurations": {
 						"production": {
-							"target": "host:esbuild:production"
+							"target": "grocery:esbuild:production"
 						},
 						"development": {
-							"target": "host:esbuild:development",
+							"target": "grocery:esbuild:development",
 							"dev": true
 						}
 					},
@@ -31,7 +31,7 @@
 				"serve": {
 					"builder": "@angular-architects/native-federation:build",
 					"options": {
-						"target": "host:serve-original:development",
+						"target": "grocery:serve-original:development",
 						"rebuildDelay": 0,
 						"dev": true,
 						"port": 0
@@ -64,7 +64,7 @@
 				"esbuild": {
 					"builder": "@angular-devkit/build-angular:application",
 					"options": {
-						"outputPath": "dist/host",
+						"outputPath": "dist/grocery",
 						"index": "src/index.html",
 						"browser": "src/main.ts",
 						"polyfills": [
@@ -112,15 +112,15 @@
 					"builder": "@angular-devkit/build-angular:dev-server",
 					"configurations": {
 						"production": {
-							"buildTarget": "host:esbuild:production"
+							"buildTarget": "grocery:esbuild:production"
 						},
 						"development": {
-							"buildTarget": "host:esbuild:development"
+							"buildTarget": "grocery:esbuild:development"
 						}
 					},
 					"defaultConfiguration": "development",
 					"options": {
-						"port": 4200
+						"port": 4201
 					}
 				}
 			}

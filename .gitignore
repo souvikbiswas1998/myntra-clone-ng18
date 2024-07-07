@@ -44,5 +44,6 @@ Thumbs.db
 package-lock.json
 
 projects/**/node_modules/
+projects/**/dist/
 projects/**/.angular/
 projects/**/package-lock.json
