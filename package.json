@@ -1,0 +1,20 @@
+{
+    "name": "micro-frontend",
+    "version": "1.0.1",
+    "private": true,
+    "scripts": {
+        "common-lib": "cd projects/common-lib && npm run-script build",
+        "install-common-lib": "cd projects/common-lib && npm install && npm run-script build",
+        "host": "cd projects/host-app && npm run-script start",
+        "mfe1": "cd projects/mfe1 && npm run-script start",
+        "mfe2": "cd projects/mfe2 && npm run-script start",
+        "start": "concurrently \"npm run host\" \"npm run mfe1\" \"npm run mfe2\"",
+        "install-common-lib-all": "concurrently \"cd projects/host-app && npm run-script install-common-lib\" \"cd projects/mfe1 && npm run-script install-common-lib\" \"cd projects/mfe2 && npm run-script install-common-lib\"",
+        "start-all": "npm run common-lib && npm run install-common-lib-all && npm run start",
+        "install-all-packages": "npm install && npm run install-common-lib && concurrently \"cd projects/host-app && npm install && npm run-script install-common-lib\" \"cd projects/mfe1 && npm install && npm run-script install-common-lib\" \"cd projects/mfe2 && npm install && npm run-script install-common-lib\""
+    },
+    "devDependencies": {
+        "concurrently": "^8.2.2",
+        "rxjs": "~7.5.0"
+    }
+}
