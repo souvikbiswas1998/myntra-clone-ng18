@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { CommonLibsComponent, CommonLibsService } from 'common-libs';
+// import { CommonLibsComponent, CommonLibsService } from 'common-libs';
 
 @Component({
   selector: 'app-root',
@@ -13,12 +13,7 @@ import { CommonLibsComponent, CommonLibsService } from 'common-libs';
 export class AppComponent {
   title = 'grocery';
 
-  constructor(service: CommonLibsService) {
-    // service.commonData({ source: 'host', destination: ['host'], data: 'host test data' });
-    // service.readData('host').subscribe((data: any) => {
-    //   console.log("host", data)
-    // })
-  }
+  constructor() { }
   addTwoNums(a: number, b: number) {
     return a + b
   }
