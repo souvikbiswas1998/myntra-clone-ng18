@@ -10,4 +10,8 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'grocery';
+
+  addTwoNums(a: number,b: number){
+    return a+b
+  }
 }
