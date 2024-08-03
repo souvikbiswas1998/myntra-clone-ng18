@@ -10,7 +10,7 @@ describe('ExampleComponent', () => {
     await TestBed.configureTestingModule({
       imports: []
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {
@@ -28,6 +28,6 @@ describe('ExampleComponent', () => {
   });
 
   it('should add two numbers', () => {
-    expect(component.addTwoNums(5,9)).toBe(14);
+    expect(component.addTwoNums(5, 9)).toBe(14);
   });
 });
