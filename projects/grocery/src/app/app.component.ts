@@ -14,9 +14,12 @@ export class AppComponent {
   title = 'grocery';
 
   constructor(service: CommonLibsService) {
-    service.commonData({ source: 'host', destination: ['host'], data: 'host test data' });
-    service.readData('host').subscribe((data: any) => {
-      console.log("host", data)
-    })
+    // service.commonData({ source: 'host', destination: ['host'], data: 'host test data' });
+    // service.readData('host').subscribe((data: any) => {
+    //   console.log("host", data)
+    // })
+  }
+  addTwoNums(a: number, b: number) {
+    return a + b
   }
 }
