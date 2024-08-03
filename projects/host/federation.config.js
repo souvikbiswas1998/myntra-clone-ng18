@@ -3,6 +3,7 @@ const { withNativeFederation, shareAll } = require('@angular-architects/native-f
 module.exports = withNativeFederation({
 
   shared: {
+    "common-lib": { singleton: true, strictVersion: false, requiredVersion: false },
     ...shareAll({ singleton: true, strictVersion: true, requiredVersion: 'auto' }),
   },
 

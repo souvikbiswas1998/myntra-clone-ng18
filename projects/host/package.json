@@ -7,6 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
+    "install-common-libs": "npm install ../../dist/common-libs",
     "postinstall": "node node_modules/@angular-architects/native-federation/src/patch-angular-build.js"
   },
   "private": true,
@@ -20,6 +21,7 @@
     "@angular/platform-browser": "^18.0.0",
     "@angular/platform-browser-dynamic": "^18.0.0",
     "@angular/router": "^18.0.0",
+    "common-libs": "file:../../dist/common-libs",
     "es-module-shims": "^1.5.12",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",

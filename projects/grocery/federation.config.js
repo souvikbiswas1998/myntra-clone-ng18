@@ -9,6 +9,7 @@ module.exports = withNativeFederation({
   },
 
   shared: {
+    "common-lib": { singleton: true, strictVersion: false, requiredVersion: false },
     ...shareAll({ singleton: true, strictVersion: true, requiredVersion: 'auto' }),
   },
 
@@ -22,5 +23,5 @@ module.exports = withNativeFederation({
 
   // Please read our FAQ about sharing libs:
   // https://shorturl.at/jmzH0
-  
+
 });
