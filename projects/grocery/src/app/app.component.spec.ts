@@ -1,6 +1,7 @@
 import { AppComponent } from './app.component';
 // example.component.spec.ts
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ChildComponent } from './child/child.component';
 
 describe('ExampleComponent', () => {
   let component: AppComponent;
