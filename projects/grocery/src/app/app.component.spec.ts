@@ -26,42 +26,6 @@ describe('AppComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  // it('should set the price in the form, when we set it in the model', () => {
-  //   // component.productPrice = '4000';
-  //   fixture.detectChanges();
-  //   expect(fixture.nativeElement.querySelector('#ProductPrice').value).toEqual('');
-  //   fixture.whenStable()
-  //     .then(() => {
-  //       expect(fixture.nativeElement.querySelector('#ProductPrice').value).toEqual('4000');
-  //     });
-  // });
-
-  // it('should do this with "waitForAsync"', waitForAsync(() => {
-  //   component.productPrice = '4000';
-  //   fixture.detectChanges();
-  //   expect(fixture.nativeElement.querySelector('#ProductPrice').value).toEqual('');
-  //   fixture.whenStable()
-  //     .then(() => {
-  //       expect(fixture.nativeElement.querySelector('#ProductPrice').value).toEqual('4000');
-  //     });
-  // }));
-
-  // // maybe you wanna create an output and listen for changes?
-  // // like, save will output productPrice + 20%
-  // // your component has:
-  // //     @Output() priceWithTax = new EventEmitter<string>();
-  // // and the save method:
-  // //    this.priceWithTax.emit( <product price increased by 20 %> )
-  // it('should do this with "waitForAsync"', waitForAsync((done: any) => {
-  //   component.priceWithTax
-  //     .subscribe((value: number) => {
-  //       expect(value).toEqual(4800);
-  //       done();
-  //     })
-  //   component.productPrice = '4000';
-  //   fixture.detectChanges();
-  // }));
-
   it('should create the form and its respective formcontrols', () => {
     expect(component.formGroup).toBeTruthy();
     // expect(component.formGroup.get('name')?.value).toBeUndefined()
@@ -107,4 +71,12 @@ describe('AppComponent', () => {
     component.formGroup.get('password')?.patchValue(password)
     return { email, password }
   }
+
+  it('should test the custom pipe', () => {
+    let str = 'test';
+    component.title = str;
+    fixture.detectChanges();
+    let x: HTMLDivElement = fixture.nativeElement.querySelector('#custom');
+    expect(x.innerHTML).toEqual(str.charAt(0).toUpperCase() + str.slice(1));
+  })
 });

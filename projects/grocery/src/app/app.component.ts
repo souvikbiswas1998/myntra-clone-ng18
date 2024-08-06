@@ -11,11 +11,12 @@ import {
   Validators,
 } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { CustomPipe } from "./test-pipe/custom.pipe";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, FormsModule, ReactiveFormsModule, MatInputModule, CommonModule],
+  imports: [RouterOutlet, FormsModule, ReactiveFormsModule, MatInputModule, CommonModule, CustomPipe],
   // providers: [CommonLibsService],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
