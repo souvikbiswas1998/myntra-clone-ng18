@@ -3,6 +3,7 @@ import { AppComponent } from './app.component';
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EventEmitter, Output } from '@angular/core';
+import { By } from '@angular/platform-browser';
 
 describe('AppComponent', () => {
   let component: AppComponent;
@@ -73,10 +74,18 @@ describe('AppComponent', () => {
   }
 
   it('should test the custom pipe', () => {
-    let str = 'test';
-    component.title = str;
+    let input = 'test';
+    let output = 'Test';
+    component.title = input;
     fixture.detectChanges();
     let x: HTMLDivElement = fixture.nativeElement.querySelector('#custom');
-    expect(x.innerHTML).toEqual(str.charAt(0).toUpperCase() + str.slice(1));
+    expect(x.innerHTML).toEqual(output);
+  })
+
+  it('should test the custom pipe', () => {
+    component.title = 'test';
+    fixture.detectChanges();
+    let x: HTMLHeadingElement = fixture.debugElement.query(By.css('#customh')).nativeElement;
+    expect(x.innerHTML).toEqual('Test');
   })
 });
