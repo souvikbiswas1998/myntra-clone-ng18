@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "jest",
-    "test:watch": "jest --watch",
+    "test:watch": "jest --clearCache && jest --watch",
     "test:ci": "jest --runInBand",
     "test:coverage": "jest --coverage",
     "install-common-libs": "npm install ../../dist/common-libs",
