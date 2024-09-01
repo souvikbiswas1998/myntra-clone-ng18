@@ -1,0 +1,14 @@
+.auth-header-image {
+    width: 400px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+:host {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: aqua;
+}

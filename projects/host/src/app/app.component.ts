@@ -1,7 +1,6 @@
-import { Component, Inject } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-// import { CommonLibsComponent, CommonLibsService } from 'common-libs';
 import { InputTextModule } from 'primeng/inputtext';
 
 @Component({
@@ -9,7 +8,7 @@ import { InputTextModule } from 'primeng/inputtext';
   standalone: true,
   imports: [RouterModule, FormsModule, ReactiveFormsModule, InputTextModule],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrl: './app.component.scss',
 })
 export class AppComponent {
   title = 'host';
